@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue Demo</title>
+    </head>
+    <body>
+        <div id="app">
+            <a v-bind:href="url">Link</a><br/>
+            <img v-bind:src="imgUrl">
+        </div>
+
+        <script type="text/javascript" src="../../vue-2.5.17/dist/vue.min.js"></script>
+        <script type="text/javascript">
+        
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    url: 'http://www.baidu.com',
+                    imgUrl: 'https://www.vue-js.com/public/images/vue.png'
+                }
+            })
+        
+        </script>
+    </body>
+</html>
