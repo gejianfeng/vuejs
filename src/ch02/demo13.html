@@ -7,7 +7,8 @@
     <body>
         <div id="app">
             <p v-if="show">Text Content</p>
-            <button v-on:click="handleClose">Hide Text</button>
+            <!--<button v-on:click="handleClose">Hide Text</button>-->
+            <button @click="handleClose">Hide Text</button>                
         </div>
 
         <script type="text/javascript" src="../../vue-2.5.17/dist/vue.min.js"></script>
