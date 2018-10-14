@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue Demo</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model="message" placeholder="Please Input ...">
+            <p>Message: {{message}}</p>
+        </div>
+
+        <script type="text/javascript" src="../../vue-2.5.17/dist/vue.min.js"></script>
+        <script type="text/javascript">
+        
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: ''
+                }
+            })
+        
+        </script>
+    </body>
+</html>
