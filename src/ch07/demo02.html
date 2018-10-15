@@ -6,22 +6,20 @@
     </head>
     <body>
         <div id='app'>
-            <ul>
-                <li v-for='book in books'>{{book.name}}</li>
-            </ul>
+            <my-component></my-component>
         </div>
 
         <script type='text/javascript' src='../../vue-2.5.17/dist/vue.min.js'></script>
         <script type='text/javascript'>
         
+            var Child = {
+                template: '<div>局部注册组件的内容</div>'
+            }
+
             var app = new Vue({
                 el: '#app',
-                data: {
-                    books: [
-                        {name: '《Vue.js实战》'},
-                        {name: '《JavaScript语言精粹》'},
-                        {name: '《JavaScript高级语言设计》'}
-                    ]
+                components: {
+                    'my-component': Child
                 }
             })
         
