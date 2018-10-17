@@ -6,8 +6,9 @@
     </head>
     <body>
         <div id='app'>
-            {{ computedNow }}</br>
-            {{ methodsNow() }}
+            <div v-if="bShow">{{ computedDate }}</div>
+            <div v-if="bShow">{{ methodDate() }}</div>
+            <button @click='switchDisplay'>Switch</button>
         </div>
 
         <script type='text/javascript' src='../../vue-2.5.17/dist/vue.min.js'></script>
@@ -15,13 +16,19 @@
         
             var app = new Vue({
                 el: '#app',
+                data: {
+                    bShow: true
+                },
                 methods: {
-                    methodsNow: function() {
+                    switchDisplay: function() {
+                        this.bShow = !this.bShow;
+                    },
+                    methodDate: function() {
                         return new Date();
                     }
                 },
                 computed: {
-                    computedNow: function() {
+                    computedDate: function() {
                         return new Date();
                     }
                 }
