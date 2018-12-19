@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue Demo</title>
+    </head>
+    <body>
+        <div id="app">
+            <p v-if="show">这是一段文本</p>
+            <button v-on:click="handleClose">点击隐藏</button>
+        </div>
+    </body>
+    <script type="text/javascript" charset="UTF-8" src="../../vue-2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                show: true
+            },
+            methods: {
+                handleClose: function() {
+                    this.show = false;
+                }
+            }
+        });
+    </script>
+</html>

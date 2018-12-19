@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue Demo</title>
+    </head>
+    <body>
+        <div id="app">
+            <p v-if="show">显示这段文本</p>
+        </div>
+        <script type="text/javascript" charset="UTF-8" src="../../vue-2.5.17/dist/vue.min.js"></script>
+        <script type="text/javascript" charset="UTF-8">
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    show: true
+                }
+            });
+        </script>
+    </body>
+</html>

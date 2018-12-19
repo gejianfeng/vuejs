@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue Demo</title>
+    </head>
+    <body>
+        <div id="app">
+            <a v-bind:href="url">链接</a>
+            <img v-bind:src="imgUrl">
+        </div>
+    </body>
+    <script type="text/javascript" charset="UTF-8" src="../../vue-2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                url: 'https://www.github.com',
+                imgUrl: 'https://cn.vuejs.org/images/logo.png'
+            }
+        });
+    </script>
+</html>
